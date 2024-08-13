@@ -9,7 +9,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "Kpsiaj110";
     $dbname = "mydatabase";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
