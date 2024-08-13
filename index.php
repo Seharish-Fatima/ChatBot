@@ -86,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,25 +94,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
-<body>
-    <div class="container">
-        <button class="collapsible">Register User</button>
-        <div class="content" id="registerContent">
-            <form action="index.php" method="POST" id="registerForm">
-                <input type="text" name="name" placeholder="Enter Your Name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces">
-                <input type="email" name="email" placeholder="Enter Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
-                <input type="password" name="password" placeholder="Enter Your Password" required>
-                <input type="submit" name="register" value="Register">
-            </form>
-        </div>
 
-        <button class="collapsible">Login User</button>
-        <div class="content" id="loginContent">
-            <form action="index.php" method="POST" id="loginForm">
-                <input type="email" name="loginEmail" placeholder="Enter Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
-                <input type="password" name="loginPassword" placeholder="Enter Your Password" required>
-                <input type="submit" name="login" value="Login">
-            </form>
+<body>
+    <div>
+        <div class="header">
+            <img src="header.png" alt="ChatterBox Connect Logo" class="logo" width="250px" height="150px">
+            <h1 class="name">ChatterBox Connect</h1>
+            <h2>Unveiling Passion, Projects, and Possibilities!</h2>
+        </div>
+        <div class="container">
+            <button class="collapsible">Register User</button>
+            <div class="content" id="registerContent">
+                <form action="index.php" method="POST" id="registerForm">
+                    <input type="text" name="name" placeholder="Enter Your Name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces">
+                    <input type="email" name="email" placeholder="Enter Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                    <input type="submit" name="register" value="Register">
+                </form>
+            </div>
+
+            <button class="collapsible">Login User</button>
+            <div class="content" id="loginContent">
+                <form action="index.php" method="POST" id="loginForm">
+                    <input type="email" name="loginEmail" placeholder="Enter Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                    <input type="password" name="loginPassword" placeholder="Enter Your Password" required>
+                    <input type="submit" name="login" value="Login">
+                </form>
+            </div>
         </div>
     </div>
     <script>
@@ -127,4 +136,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 </body>
+
 </html>
